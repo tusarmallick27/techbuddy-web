@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TechBuddy – Bridging Generations Through Technology</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#101A36;--blue:#4169F5;--lav:#EDEBFF;--cream:#FFF9F0;--coral:#FF8066;--bg:#FFF9F0;--card:#fff;--ink:#101A36;--mute:#4a5578;--line:#e1deef;--fs:17px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1226;--card:#17224a;--ink:#f3f1ff;--mute:#b9c1e6;--line:#2c3a73;--lav:#1e2a5c}}
+:root[data-theme="dark"]{--bg:#0b1226;--card:#17224a;--ink:#f3f1ff;--mute:#b9c1e6;--line:#2c3a73;--lav:#1e2a5c}
+:root[data-hc="1"]{--ink:#000;--mute:#000;--line:#000;--bg:#fff;--card:#fff}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;font:var(--fs)/1.6 'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+h1,h2,h3{line-height:1.12;margin:0 0 .5em;letter-spacing:-.02em}h1{font-size:clamp(2.2rem,5.4vw,3.8rem);font-weight:800}h2{font-size:clamp(1.7rem,3.4vw,2.4rem)}
+a,button{font:inherit;color:inherit}:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{max-width:1120px;margin:auto;display:flex;align-items:center;gap:6px;padding:10px 20px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:1.3rem;margin-right:auto;text-decoration:none}.logo b{color:var(--blue)}
+nav a.l{padding:8px 12px;border-radius:99px;text-decoration:none;font-weight:600;font-size:.92em}nav a.l:hover,nav a.on{background:var(--lav)}
+select,input,textarea{font:inherit;padding:11px 14px;border:2px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);width:100%}
+nav select{width:auto;padding:6px 10px}
+.btn{display:inline-block;border:0;cursor:pointer;text-decoration:none;font-weight:800;padding:14px 26px;border-radius:99px;background:var(--blue);color:#fff;box-shadow:0 10px 24px -8px #4169f5aa;transition:transform .15s}.btn:hover{transform:translateY(-2px)}
+.btn.o{background:var(--coral);box-shadow:0 10px 24px -8px #ff8066aa;color:#101A36}.btn.g{background:var(--lav);color:var(--ink);box-shadow:none}.btn.s{padding:9px 18px;font-size:.9em}
+main{max-width:1120px;margin:auto;padding:28px 20px 70px}
+.grad{background:linear-gradient(90deg,var(--blue),#9b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;min-height:70vh}
+.badge{display:inline-block;background:var(--lav);padding:7px 16px;border-radius:99px;font-weight:600;font-size:.9em;margin-bottom:18px}
+.badge i{display:inline-block;font-style:normal;animation:beat 1.6s infinite}@keyframes beat{50%{transform:scale(1.3)}}
+.row{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0}.ticks{display:flex;gap:18px;flex-wrap:wrap;color:var(--mute);font-size:.9em;font-weight:600}
+.stage{position:relative;aspect-ratio:1;border-radius:44px;background:radial-gradient(circle at 30% 20%,#9b8cff,#4169F5 45%,#101A36);box-shadow:0 40px 80px -30px #4169f5;overflow:hidden}
+.stage .p{position:absolute;font-size:clamp(5rem,13vw,9rem);line-height:1;filter:drop-shadow(0 18px 20px #0006)}
+.fl{position:absolute;background:#ffffffee;color:#101A36;border-radius:18px;padding:10px 14px;font-weight:600;font-size:.82em;box-shadow:0 14px 30px -10px #0007;animation:fy 5s ease-in-out infinite}.fl:nth-of-type(2){animation-delay:-2s}.fl:nth-of-type(3){animation-delay:-3.5s}
+@keyframes fy{50%{transform:translateY(-12px)}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:22px}
+.svc{cursor:pointer;transition:.2s}.svc:hover{border-color:var(--blue);transform:translateY(-3px)}.svc .ic{font-size:2rem}.svc p,.mute{color:var(--mute);margin:.3em 0 .8em}
+.tag{display:inline-block;background:var(--lav);border-radius:99px;padding:2px 11px;font-size:.78em;font-weight:600;margin:2px 3px 2px 0}.ok{color:#0a8a4a;font-weight:800}
+.av{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-size:2rem;background:var(--lav)}
+.filters{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:10px;margin:16px 0 24px}
+.demo{background:#fff2cf;color:#5a4300;border-radius:14px;padding:9px 14px;font-size:.85em;margin-bottom:18px}
+.steps{display:flex;gap:6px;margin-bottom:20px}.steps span{flex:1;height:8px;border-radius:9px;background:var(--line)}.steps .d{background:var(--blue)}
+.opt{display:block;width:100%;text-align:left;padding:14px 18px;margin:8px 0;border:2px solid var(--line);border-radius:18px;background:var(--card);cursor:pointer}.opt.sel{border-color:var(--blue);background:var(--lav)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.big{font-size:2rem;font-weight:800}
+.vid{background:#101A36;border-radius:28px;aspect-ratio:16/9;display:grid;place-items:center;color:#fff;font-size:4rem;position:relative}.vid small{position:absolute;bottom:14px;left:18px;font-size:.9rem}
+.err{color:#c0262d;font-weight:600;min-height:1.4em}
+#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--navy);color:#fff;padding:12px 22px;border-radius:99px;opacity:0;transition:.3s;pointer-events:none}#toast.on{opacity:1}
+@media(max-width:800px){.hero,.two{grid-template-columns:1fr}.filters{grid-template-columns:1fr 1fr}}
+</style></head><body>
+<header><nav aria-label="Main">
+<a class="logo" href="#home">Tech<b>Buddy</b></a>
+<a class="l" href="#home">Home</a><a class="l" href="#find">Find a Buddy</a><a class="l" href="#senior">Senior</a><a class="l" href="#student">Student</a><a class="l" href="#remote">Remote</a><a class="l" href="#safety">Safety</a>
+<select id="lang" aria-label="Language"><option value="en">English</option><option value="hi">हिन्दी</option><option value="bn">বাংলা</option></select>
+<button class="btn g s" id="fs" aria-label="Larger text">A+</button><button class="btn g s" id="hc" aria-label="High contrast">◐</button>
+</nav></header>
+<main id="app" tabindex="-1"></main><div id="toast" role="status"></div>
+<script>
+const $=s=>document.querySelector(s),app=$('#app');
+const T={en:{h:'Making Technology Feel Like a',g:'Friendly Conversation.',find:'Find Your Tech Buddy →',be:'Become a Tech Buddy →'},
+hi:{h:'तकनीक को बनाएं एक',g:'दोस्ताना बातचीत।',find:'अपना टेक बडी चुनें →',be:'टेक बडी बनें →'},
+bn:{h:'প্রযুক্তিকে করুন একটি',g:'বন্ধুত্বপূর্ণ আলাপ।',find:'আপনার টেক বাডি খুঁজুন →',be:'টেক বাডি হোন →'}};
+let lang='en';
+const B=[
+{id:1,n:'Aarav Sen',c:'Jadavpur University',e:'👨🏽‍🎓',sk:['Smartphone','UPI'],lg:['Bengali','English','Hindi'],r:4.9,rv:48,x:'2 yrs',p:199,m:'both',loc:'Kolkata'},
+{id:2,n:'Meera Iyer',c:'St. Xavier’s College',e:'👩🏻‍🎓',sk:['WhatsApp','Scam safety'],lg:['English','Hindi'],r:4.8,rv:36,x:'1 yr',p:179,m:'remote',loc:'Kolkata'},
+{id:3,n:'Rohan Das',c:'IIT Kharagpur',e:'🧑🏾‍🎓',sk:['Laptop','Wi-Fi & TV'],lg:['Bengali','English'],r:4.7,rv:22,x:'1 yr',p:249,m:'both',loc:'Kharagpur'},
+{id:4,n:'Ananya Roy',c:'Presidency University',e:'👩🏽‍🎓',sk:['Email','Govt websites'],lg:['Bengali','Hindi'],r:5.0,rv:15,x:'6 mo',p:149,m:'inperson',loc:'Kolkata'},
+{id:5,n:'Kabir Khan',c:'Calcutta University',e:'👨🏻‍🎓',sk:['Social media','Shopping'],lg:['Hindi','English'],r:4.6,rv:19,x:'8 mo',p:159,m:'remote',loc:'Kolkata'},
+{id:6,n:'Ishita Ghosh',c:'Techno India University',e:'👩🏾‍🎓',sk:['Smartphone','Video calls'],lg:['Bengali','English'],r:4.8,rv:31,x:'1.5 yrs',p:189,m:'both',loc:'Howrah'}];
+const S=[['📱','Smartphone basics','Calls, camera, settings, apps.'],['💬','WhatsApp & video calls','See family face to face.'],['💸','Payments & UPI','Pay safely, step by step.'],['🌐','Email & browsing','Send, search, stay organised.'],['👥','Social media','Connect without the confusion.'],['🛒','Online shopping','Order with confidence.'],['🏛️','Government websites','Forms and portals, simplified.'],['📺','Smart TV & Wi-Fi','Get everything connected.'],['💻','Laptop basics','Comfortable with any computer.'],['🛡️','Scam awareness','Spot fakes before they cost you.']];
+let bk={step:0,buddy:null,svc:null,mode:null,date:'',time:'',note:''};
+let sessions=[{id:'TB-1042',b:'Aarav Sen',svc:'WhatsApp & video calls',when:'Tomorrow, 5:00 PM',st:'Confirmed',mode:'Remote'}];
+let reqs=[{id:'R1',who:'Mrs. Banerjee',svc:'Smartphone basics',when:'Sat 11:00 AM',mode:'In person'},{id:'R2',who:'Mr. Mehta',svc:'UPI education',when:'Sun 4:00 PM',mode:'Remote'}];
+let ff={q:'',m:'',l:'',p:300};
+const toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2400)};
+const buddyCard=b=>`<article class="card"><div style="display:flex;gap:14px;align-items:center"><div class="av" aria-hidden="true">${b.e}</div><div><h3 style="margin:0;font-size:1.15rem">${b.n}</h3><span class="mute" style="margin:0;font-size:.85em">${b.c}</span></div></div>
+<p style="margin:12px 0 4px"><span class="ok">✓ College ID checked (demo)</span> · ⭐ ${b.r} (${b.rv})</p>
+<div>${b.sk.map(s=>`<span class="tag">${s}</span>`).join('')}</div><p class="mute" style="margin:6px 0">${b.lg.join(', ')} · ${b.x} · ${b.m==='both'?'Remote & in person':b.m==='remote'?'Remote':'In person'}</p>
+<div style="display:flex;justify-content:space-between;align-items:center"><span class="big" style="font-size:1.4rem">₹${b.p}<small class="mute">/hr</small></span><button class="btn s" data-book="${b.id}">Book session</button></div></article>`;
+const V={
+home(){const t=T[lang];return`<section class="hero"><div><span class="badge"><i>❤️</i> Technology with a Human Touch</span>
+<h1>${t.h} <span class="grad">${t.g}</span></h1><p class="mute" style="max-width:34em">Meet your personal Tech Buddy. Get patient, trusted help with smartphones, digital payments, video calls, and everyday technology from verified college students.</p>
+<div class="row"><a class="btn" href="#find">${t.find}</a><a class="btn o" href="#student">${t.be}</a></div>
+<div class="ticks"><span>✓ Verified student community</span><span>✓ Flexible one-hour sessions</span><span>✓ Remote & in person</span></div></div>
+<div class="stage" role="img" aria-label="A student helping a senior with a smartphone"><span class="p" style="left:8%;bottom:14%">👵🏽</span><span class="p" style="right:10%;bottom:20%">🧑🏽‍💻</span><span class="p" style="font-size:3.4rem;left:44%;top:46%">📱</span>
+<div class="fl" style="top:9%;left:8%">✅ UPI payment sent safely</div><div class="fl" style="top:24%;right:7%">📹 Video call with grandkids</div><div class="fl" style="bottom:7%;left:30%">🛡️ Session consent given</div></div></section>
+<section style="margin-top:60px"><h2>What would you like help with?</h2><div class="grid">${S.map(s=>`<div class="card svc" tabindex="0" data-svc="${s[1]}"><div class="ic">${s[0]}</div><h3 style="font-size:1.1rem">${s[1]}</h3><p>${s[2]}</p><span class="btn g s">Book this</span></div>`).join('')}</div></section>
+<section class="card" style="margin-top:60px;background:var(--navy);color:#fff"><h2>Three steps. One hour. No jargon.</h2><div class="two"><p>Pick a verified Tech Buddy, choose remote or a home visit, then learn at your own pace.</p><p>You control screen sharing. Buddies never ask for PINs, OTPs or passwords.</p></div></section>`},
+find(){const f=B.filter(b=>(!ff.q||(b.n+b.sk+b.loc).toLowerCase().includes(ff.q.toLowerCase()))&&(!ff.m||b.m===ff.m||b.m==='both')&&(!ff.l||b.lg.includes(ff.l))&&b.p<=ff.p);
+return`<h2>Find a Tech Buddy</h2><div class="demo">Demo profiles with sample data. A real launch needs genuine ID and college verification.</div>
+<div class="filters"><input id="fq" placeholder="Search name, skill, city" aria-label="Search" value="${ff.q}"><select id="fm" aria-label="Mode"><option value="">Any mode</option><option value="remote" ${ff.m==='remote'?'selected':''}>Remote</option><option value="inperson" ${ff.m==='inperson'?'selected':''}>In person</option></select><select id="fl" aria-label="Language"><option value="">Any language</option>${['Bengali','Hindi','English'].map(l=>`<option ${ff.l===l?'selected':''}>${l}</option>`).join('')}</select><select id="fp" aria-label="Max price"><option value="300">Any price</option><option value="200" ${ff.p===200?'selected':''}>Up to ₹200</option><option value="160" ${ff.p===160?'selected':''}>Up to ₹160</option></select></div>
+<div class="grid">${f.length?f.map(buddyCard).join(''):'<div class="card">No Tech Buddies match yet. Try clearing a filter.</div>'}</div>`},
+book(){const s=bk.step,b=B.find(x=>x.id==bk.buddy);const bar=`<div class="steps">${[0,1,2,3].map(i=>`<span class="${i<=s?'d':''}"></span>`).join('')}</div>`;
+if(!b)return`<div class="card">Choose a Tech Buddy first. <a href="#find">Find a Tech Buddy</a></div>`;
+if(s===0)return`<h2>Book ${b.n}</h2>${bar}<p class="mute">What do you need help with?</p>${S.map(x=>`<button class="opt ${bk.svc===x[1]?'sel':''}" data-ps="${x[1]}">${x[0]} ${x[1]}</button>`).join('')}<p class="err" id="e"></p><button class="btn" data-next>Continue</button>`;
+if(s===1)return`<h2>How should we meet?</h2>${bar}${[['remote','🎥 Remote video call'],['inperson','🏠 Home visit']].filter(o=>b.m==='both'||b.m===o[0]).map(o=>`<button class="opt ${bk.mode===o[0]?'sel':''}" data-pm="${o[0]}">${o[1]}</button>`).join('')}<p class="err" id="e"></p><button class="btn g" data-back>Back</button> <button class="btn" data-next>Continue</button>`;
+if(s===2)return`<h2>When and what?</h2>${bar}<label>Date<input type="date" id="bd" value="${bk.date}"></label><label>Time<select id="bt">${['','10:00 AM','2:00 PM','5:00 PM'].map(t=>`<option ${bk.time===t?'selected':''}>${t}</option>`).join('')}</select></label><label>Tell us the problem<textarea id="bn" rows="3" placeholder="e.g. I can’t send photos on WhatsApp">${bk.note}</textarea></label><p class="err" id="e"></p><button class="btn g" data-back>Back</button> <button class="btn" data-next>Review</button>`;
+if(s===3)return`<h2>Confirm booking</h2>${bar}<div class="card"><p><b>${b.n}</b> · ${bk.svc}<br>${bk.mode==='remote'?'Remote':'Home visit'} · ${bk.date}, ${bk.time}</p><p>Session ₹${b.p}<br>Service fee ₹${Math.round(b.p*.1)}<br><span class="big">Total ₹${Math.round(b.p*1.1)}</span></p><p class="mute">Simulated payment. No real money moves.</p></div><br><button class="btn g" data-back>Back</button> <button class="btn o" data-pay>Pay & confirm</button>`;
+return`<div class="card" style="text-align:center"><div class="big">🎉 Booking confirmed</div><p>${sessions[0].id} with ${sessions[0].b}, ${sessions[0].when}. A reminder was sent to you and your trusted contact.</p><a class="btn" href="#senior">View my sessions</a></div>`},
+senior(){return`<h2>Welcome, Mrs. Sharma 👋</h2><div class="demo">Demo account</div><div class="grid"><a class="btn" href="#find" style="padding:26px;text-align:center">📅 Book a Tech Buddy</a><a class="btn o" href="#remote" style="padding:26px;text-align:center">🎥 Join my session</a><a class="btn g" href="#safety" style="padding:26px;text-align:center">🆘 Help & support</a></div>
+<h3 style="margin-top:34px">Upcoming sessions</h3>${sessions.length?sessions.map(s=>`<div class="card" style="margin-bottom:12px"><b>${s.svc}</b> with ${s.b}<br><span class="mute">${s.when} · ${s.mode} · ${s.st} · ${s.id}</span><br><button class="btn g s" data-cancel="${s.id}">Cancel session</button></div>`).join(''):'<div class="card">No sessions yet. Book your first one.</div>'}
+<div class="card" style="margin-top:18px"><b>Family helper</b><p class="mute">Let a trusted family member manage bookings for you.</p><label><input type="checkbox" id="fam" style="width:auto"> I allow my family member to help</label></div>`},
+student(){return`<h2>Tech Buddy dashboard</h2><div class="demo">Demo account · Verification: pending review</div><div class="grid"><div class="card"><div class="big">₹4,260</div><span class="mute">Earned this month (after 10% fee)</span></div><div class="card"><div class="big">⭐ 4.9</div><span class="mute">48 reviews</span></div><div class="card"><div class="big">23</div><span class="mute">Completed sessions</span></div></div>
+<h3 style="margin-top:30px">New requests</h3>${reqs.length?reqs.map(r=>`<div class="card" style="margin-bottom:12px"><b>${r.who}</b> · ${r.svc}<br><span class="mute">${r.when} · ${r.mode}</span><br><button class="btn s" data-acc="${r.id}">Accept</button> <button class="btn g s" data-rej="${r.id}">Decline</button></div>`).join(''):'<div class="card">All caught up. New requests appear here.</div>'}
+<h3>Availability</h3><div class="card">${['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(d=>`<label class="tag"><input type="checkbox" style="width:auto" ${'Sat Sun Wed'.includes(d)?'checked':''}> ${d}</label>`).join('')}</div>`},
+remote(){return`<h2>Remote session</h2><div class="vid">👩🏽‍🎓<small id="ss">Screen not shared. Only you can start sharing.</small></div><div class="row"><button class="btn g" data-t="Microphone">🎤 Mic</button><button class="btn g" data-t="Camera">📷 Camera</button><button class="btn o" id="share">🖥️ Share my screen</button><button class="btn" style="background:#c0262d" data-end>End session</button></div>
+<div class="card"><b>Simple steps</b><p class="mute">1. Press “Share my screen” when you’re ready.<br>2. You will be asked to confirm.<br>3. Stop any time. Never read out PINs, OTPs or passwords.</p></div>`},
+safety(){return`<h2>Safety Center</h2><div class="grid">${[['🪪','Identity & college ID checks','Every Tech Buddy completes a verification workflow before a badge appears.'],['🖥️','You control screen sharing','No hidden access. Sharing starts and stops with you.'],['🔐','No secrets, ever','Buddies never ask for banking passwords, PINs or OTPs.'],['🏠','Home visit safeguards','See verified details first, share visit info with a trusted contact, check in and out.'],['🚩','Report or block','One tap from any session.'],['☎️','Emergency contact','Call your saved contact straight from the app.']].map(x=>`<div class="card"><div style="font-size:2rem">${x[0]}</div><h3 style="font-size:1.1rem">${x[1]}</h3><p class="mute">${x[2]}</p></div>`).join('')}</div>`}};
+function render(){const r=(location.hash||'#home').slice(1).split('?')[0];const v=V[r]?r:'home';app.innerHTML=V[v]();document.querySelectorAll('nav a.l').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+v));scrollTo(0,0)}
+function openBook(id){bk={step:0,buddy:id,svc:bk.svc,mode:null,date:'',time:'',note:''};if(location.hash==='#book')render();else location.hash='#book'}
+addEventListener('hashchange',render);
+app.addEventListener('input',e=>{const i=e.target.id;if(i==='fq')ff.q=e.target.value;if(i==='fm')ff.m=e.target.value;if(i==='fl')ff.l=e.target.value;if(i==='fp')ff.p=+e.target.value;if(['fq','fm','fl','fp'].includes(i)){const p=e.target.selectionStart;const y=scrollY;render();scrollTo(0,y);const n=$('#'+i);n.focus();try{n.setSelectionRange(p,p)}catch(_){}}});
+app.addEventListener('click',e=>{const t=e.target.closest('button,.svc,a');if(!t)return;const d=t.dataset,err=m=>{const x=$('#e');x&&(x.textContent=m)};
+if(d.book)return openBook(+d.book);if(d.svc){bk.svc=d.svc;location.hash='#find';toast('Now pick your Tech Buddy');return}
+if(d.ps){bk.svc=d.ps;return render()}if(d.pm){bk.mode=d.pm;return render()}
+if(d.hasOwnProperty('back')){bk.step--;return render()}
+if(d.hasOwnProperty('next')){if(bk.step===0&&!bk.svc)return err('Please choose a service.');if(bk.step===1&&!bk.mode)return err('Please choose remote or home visit.');
+if(bk.step===2){bk.date=$('#bd').value;bk.time=$('#bt').value;bk.note=$('#bn').value.trim();if(!bk.date||!bk.time)return err('Please pick a date and time.');if(bk.note.length<5)return err('Please describe what you need help with.')}
+bk.step++;return render()}
+if(d.hasOwnProperty('pay')){const b=B.find(x=>x.id==bk.buddy);sessions.unshift({id:'TB-'+(1043+sessions.length),b:b.n,svc:bk.svc,when:bk.date+', '+bk.time,st:'Confirmed',mode:bk.mode==='remote'?'Remote':'Home visit'});bk.step=4;return render()}
+if(d.cancel){sessions=sessions.filter(s=>s.id!==d.cancel);toast('Session cancelled');return render()}
+if(d.acc||d.rej){reqs=reqs.filter(r=>r.id!==(d.acc||d.rej));toast(d.acc?'Request accepted':'Request declined');return render()}
+if(d.t){const off=t.style.opacity!=='.5';t.style.opacity=off?'.5':'1';toast(d.t+(off?' off':' on'))}
+if(t.id==='share'){if(confirm('Share your screen with your Tech Buddy? You can stop any time.')){$('#ss').textContent='You are sharing your screen. Press End to stop.';toast('Screen sharing started by you')}}
+if(d.hasOwnProperty('end')){toast('Session ended. Please rate your Tech Buddy.');location.hash='#senior'}});
+$('#lang').onchange=e=>{lang=e.target.value;render()};let z=0;$('#fs').onclick=()=>{z=(z+1)%3;document.documentElement.style.setProperty('--fs',[17,20,23][z]+'px')};
+$('#hc').onclick=()=>{const r=document.documentElement;r.dataset.hc=r.dataset.hc==='1'?'':'1'};
+render();
+</script></body></html>
